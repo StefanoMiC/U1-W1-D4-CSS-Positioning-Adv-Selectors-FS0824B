@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>position relative</title>
+    <style>
+        .container {
+            max-width: 768px;
+            margin-inline: auto;
+            background-color: #ebebeb;
+            border-radius: 10px;
+            padding: 0.5rem;
+            min-height: 40vh;
+            margin-bottom: 1rem;
+            position: relative;
+            z-index: 0;
+        }
+
+        .box {
+            height: 100px;
+            width: 100px;
+            background-color: rgba(0, 0, 0, 0.2);
+            display: inline-block;
+            margin-bottom: 4px;
+            border-radius: 6px;
+        }
+
+        .aqua {
+            background-color: aqua;
+            position: relative;
+            /* position relative ci attiva la possibilità di spostare l'elemento RELATIVAMENTE alla sua posizione iniziale,
+            oltre alla possibilità di spostarlo sull'asse z con la proprietà z-index */
+
+            /* spostare l'elemento NON produce un riarrangiamento degli elementi che gli stavano attorno (rimane riservato il suo spazio) */
+            top: -10px;
+            right: -50px;
+        }
+
+        .coral {
+            background-color: coral;
+            position: relative;
+            left: -40px;
+        }
+
+        .green {
+            background-color: palegreen;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Position relative</h1>
+    <div class="container">
+        <div class="box aqua">1</div>
+        <div class="box coral">2</div>
+        <div class="box green">3</div>
+    </div>
+
+
+</body>
+
+</html>

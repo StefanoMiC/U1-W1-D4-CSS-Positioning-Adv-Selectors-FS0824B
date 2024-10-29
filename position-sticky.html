@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>position sticky</title>
+    <style>
+        body {
+            margin: 0;
+            min-height: 250vh;
+            padding-top: 51px;
+        }
+
+        .container {
+            max-width: 768px;
+            margin-inline: auto;
+            background-color: #ebebeb;
+            border-radius: 10px;
+            padding: 0.5rem;
+            min-height: 40vh;
+            margin-bottom: 1rem;
+            /* un elemento posizionato in fixed non subisce il limite del genitore in position relative */
+            position: relative;
+            z-index: 0;
+        }
+
+        .box {
+            height: 100px;
+            width: 100px;
+            background-color: rgba(0, 0, 0, 0.2);
+            display: inline-block;
+            margin-bottom: 4px;
+            border-radius: 6px;
+        }
+
+        .aqua {
+            background-color: aqua;
+            position: fixed;
+            right: 10px;
+            bottom: 10px;
+        }
+
+        .coral {
+            background-color: coral;
+        }
+
+        .green {
+            background-color: palegreen;
+        }
+
+
+        header {
+            background-color: palegoldenrod;
+            position: fixed;
+            top: 0;
+            right: 0;
+            left: 0;
+            z-index: 999;
+        }
+
+        ul {
+            display: inline-block;
+        }
+
+        ul li {
+            display: inline-block;
+        }
+
+        .alert {
+            background-color: crimson;
+            color: white;
+            padding: 1rem;
+            position: sticky;
+            top: 51px;
+            z-index: 10;
+        }
+
+        .alert.alt {
+            background-color: powderblue;
+            color: black;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <span>Epicode</span>
+        <ul>
+            <li>element</li>
+            <li>element</li>
+            <li>element</li>
+            <li>element</li>
+            <li>element</li>
+        </ul>
+    </header>
+    <h1>Position sticky</h1>
+    <div class="container">
+        <div class="box aqua">1</div>
+        <div class="box coral">2</div>
+        <div class="box green">3</div>
+    </div>
+    <div class="alert">Questo banner dovrebbe rimanere fisso una volta toccato il bordo superiore della pagina</div>
+
+    <div class="container">
+        <h4>Titolo</h4>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt similique perspiciatis impedit quidem autem
+            quam et dolore maxime cupiditate voluptatem nemo, pariatur repellat inventore provident, nam at vero
+            eligendi fuga!
+            Consequuntur fugit perferendis magni doloribus omnis dicta adipisci voluptate eveniet illo nihil, soluta
+            necessitatibus voluptas voluptates blanditiis. Obcaecati atque qui repudiandae id voluptate excepturi
+            reiciendis nisi quisquam. Eos, mollitia? Praesentium!
+            Nemo quae rerum odio dolore quo, nulla nesciunt necessitatibus unde a autem veritatis error explicabo ab
+            doloribus corrupti? Quaerat aliquam commodi vel nulla praesentium dolorum illo provident aperiam consequatur
+            minima?
+            Optio non fuga exercitationem molestiae! Vitae ratione ipsa molestiae culpa recusandae ad beatae ut, officia
+            fugiat esse error impedit praesentium fugit maxime nesciunt aperiam, repellat aspernatur commodi illum ex
+            itaque?
+            Impedit eum ullam saepe omnis veritatis, vero voluptate, facilis blanditiis, quibusdam unde non facere.
+            Exercitationem iste, esse eos corrupti velit expedita cum alias, perspiciatis dolores dignissimos voluptates
+            quibusdam, omnis ad?
+            Facilis totam, ex voluptates voluptate neque blanditiis mollitia autem illum, reprehenderit assumenda
+            nostrum corporis cum eum impedit maiores repellat aspernatur iure quia officia dolorem aut delectus
+            repudiandae! Sunt, doloribus. Ad.
+            Quia, voluptas? Itaque error vitae, enim quos delectus sint, dolores corporis odio accusantium ad maxime
+            voluptatibus! Recusandae tenetur eaque ad eveniet deserunt nostrum officia nam dolor. Nesciunt aperiam
+            deserunt totam!
+            Possimus vitae saepe expedita, totam dolorum error quis ipsum sit sapiente ducimus veniam doloribus sunt
+            ipsa voluptatum architecto incidunt eligendi dolor officiis voluptatem neque. Labore tempore exercitationem
+            necessitatibus velit reprehenderit?
+            Et, nobis! Sed voluptatum animi laboriosam hic repudiandae architecto ipsum distinctio sequi ipsam alias ab
+            aliquid quas voluptatibus quam, molestiae voluptates libero pariatur sapiente, saepe adipisci quos
+            repellendus, voluptas nobis.
+            Eveniet totam, voluptate excepturi soluta sunt nemo quam, hic aut et ducimus sint voluptas minus provident
+            fuga maxime temporibus at optio veritatis qui, ad inventore corporis nesciunt. Magni, quod corrupti!</p>
+    </div>
+    <div class="alert alt">Questo banner dovrebbe rimanere fisso una volta toccato il bordo superiore della pagina</div>
+
+</body>
+
+</html>
